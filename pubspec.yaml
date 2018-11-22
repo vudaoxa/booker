@@ -12,13 +12,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  shared_preferences: 0.3.2
-  logging: 0.11.3+1
+  shared_preferences: "^0.4.3"
+  logging: 0.11.3+2
   firebase_auth: "^0.4.5"
   google_sign_in: "^2.1.0"
   cloud_firestore: "^0.2.9"
   intl: "^0.15.2"
-  range: "^1.1.1"
+  range: "^1.1.4"
 
 
 # For information on the generic Dart part of this file, see the
