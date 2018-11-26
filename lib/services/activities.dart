@@ -35,14 +35,14 @@ class ActivitiesModel{
         activities.getDocuments().then((activities) {
           activities.documents.forEach((activity) {
             CollectionReference bookPeriodsRef = this.activities.document(
-                activity.documentID).getCollection("book_periods");
+                activity.documentID).collection("book_periods");
             bookPeriodsRef.getDocuments().then((bookPeriods) {
               bookPeriods.documents.forEach((period) {
                 if (period.documentID != "test") {
                   bookPeriodsRef.document(period.documentID).delete();
                 }
               });
-              bookPeriodsRef = this.activities.document(activity.documentID).getCollection("book_periods");
+              bookPeriodsRef = this.activities.document(activity.documentID).collection("book_periods");
               print(bookPeriodsRef.toString());
               for (BookingItem item in BookingTable.getDefaultDayTable()) {
                 print(item.minuteEnd.toString());

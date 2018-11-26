@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:booker/base/loading_state.dart';
 import 'package:intl/intl.dart';
-import "package:range/range.dart";
+//import "package:range/range.dart";
 import 'package:booker/base/dialog_shower.dart' as DialogShower;
 
 
@@ -88,7 +88,8 @@ class _BookingState extends LoadingBaseState<Booking> {
   }
 
   ListView get timeList{
-    var list = range(8,21).toList();
+//    var list = range(8,21).toList();
+    var list = new List<int>.generate(10, (i) => i + 1);
     return new ListView.builder(
         itemBuilder:(BuildContext context, int index) => new Container(
           child: new Container(
